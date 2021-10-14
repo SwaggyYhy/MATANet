@@ -1,7 +1,7 @@
 # Multi-scale Adaptive Task Attention Network for Few-Shot Learning
 This code implements the Multi-scale Adaptive Task Attention Network (MATANet).
 
-Our code will be released soon.
+Our code is based on [CovaMNet](https://github.com/WenbinLee/CovaMNet).
 
 ## Citation
 If you find our work useful, please consider citing our work using the bibtex:
@@ -30,36 +30,16 @@ If you find our work useful, please consider citing our work using the bibtex:
 
 **Note: You need to manually change the dataset directory.**
 
-## miniImageNet Few-shot Classification
-* Train a 5-way 1-shot model based on Conv-64F:
+## Few-shot Classification
+* Train a 5-way 1-shot model based on Conv-128F (on miniImageNet dataset):
 ```
-python MATA_Train_5way1shot.py --dataset_dir ./datasets/miniImageNet --data_name miniImageNet
-```
-Test model on the test set:
-```
-python MATA_Test_5way1shot.py --dataset_dir ./datasets/miniImageNet --data_name miniImageNet --resume ./results/MATA_miniImageNet_MATA64_5Way_1Shot/model_best_test.pth.tar 
-```
-## Fine-grained Few-shot Classification
-* Data preprocessing (e.g., CUB-200-2011).
-* Run the preprocessing script.
-```
-python ./dataset/CUB_200_2011_preprocessing.py
-```
-* Train a 5-way 1-shot model based on Conv-64F:
-```
-python MATA_Train_5way1shot.py --dataset_dir ./datasets/CUB_200_2011 --data_name CUBBirds
+python MATA_Train.py --dataset_dir ./datasets/miniImageNet --data_name miniImageNet --way_num 5 --shot_num 1
 ```
 Test model on the test set:
 ```
-python MATA_Test_5way1shot.py --dataset_dir ./datasets/CUB_200_2011 --data_name CUBBirds --resume ./results/MATA_CUBBirds_MATA64_5Way_1Shot/model_best_test.pth.tar 
+python MATA_Test.py --dataset_dir ./datasets/miniImageNet --data_name miniImageNet --way_num 5 --shot_num 1
+./results/MATA_miniImageNet_MATA_5Way_1Shot_K5/model_best.pth.tar --basemodel MATA
 ```
-## Pretrained models
-We also provide some of the pre-trained models.
-You can run the following command to evaluate the model
-```
-python MATA_Test_5way1shot_fg.py --dataset_dir ./datasets/CUB_200_2011 --data_name CUBBirds --resume ./results/MATA_CUBBirds_MATA64_5Way_1Shot/model_best_test.pth.tar 
-```
-
 
 ## Contacts
 Please feel free to contact us if you have any problems.

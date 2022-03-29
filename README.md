@@ -6,11 +6,11 @@ Our code is based on [CovaMNet](https://github.com/WenbinLee/CovaMNet).
 ## Citation
 If you find our work useful, please consider citing our work using the bibtex:
 ```
-@Article{chen2020multi,
+@inproceedings{chen2020multi,
 	author  = {Chen, Haoxing and Li, Huaxiong and Li, Yaohui and Chen, Chunlin},
 	title   = {Multi-scale Adaptive Task Attention Network for Few-Shot Learning},
-	journal = {arXiv preprint arXiv:2011.14479},
-	year    = {2020},
+	booktitle = {ICPR},
+	year    = {2022},
 }
 ```
 

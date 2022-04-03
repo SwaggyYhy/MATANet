@@ -1,4 +1,4 @@
-# Multi-scale Adaptive Task Attention Network for Few-Shot Learning
+# Multi-scale Adaptive Task Attention Network for Few-Shot Learning(ICPR-2022)
 This code implements the Multi-scale Adaptive Task Attention Network (MATANet).
 
 Our code is based on [CovaMNet](https://github.com/WenbinLee/CovaMNet).
